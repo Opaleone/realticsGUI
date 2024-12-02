@@ -1,5 +1,5 @@
 {
-  "name": "realticsgui",
+  "name": "realtics",
   "version": "1.0.0",
   "description": "A gui for f-apartments-db that displays metrics about local Austin apartments.",
   "type": "module",
