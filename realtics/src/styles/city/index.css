@@ -1,0 +1,125 @@
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+
+a { word-break: break-all; }
+
+#allCityInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#cityDisplayContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#cityIntro, #cityStats {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 43.3vh;
+  width: 50vw;
+  border: solid white 3px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#cityIntro {
+  margin-bottom: 1.5vh;
+}
+
+#cityStats{
+  margin-top: 1.5vh;
+}
+
+#cityIntroTitle {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  margin-top: 12px;
+}
+
+#cityLinkContainer {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 90vh;
+  width: 50vw;
+  border: solid white 3px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.labelContainer {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  padding: 5px;
+  top: 25px;
+  z-index: 999;
+  background: linear-gradient(-45deg, #844da3, #663b94, #221c69, #080942);
+  animation:  gradient 15s ease infinite;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.labelText {
+  margin: 0;
+  padding: 0;
+}
+
+.move-right {
+  margin-left: 35px;
+}
+
+.idvPropertyLink {
+  /* display: inline-block; */
+  text-decoration: none;
+}
+
+.idvPropertyP {
+  display: block;
+  color: white;
+  font-size: 20px;
+  scrollbar-width: none;
+}
+
+#errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#errorTitle {
+  color: white;
+  font-size: 42px;
+}
+
+#cityLinkContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.idvPropertyP:hover {
+  color: #aaa
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

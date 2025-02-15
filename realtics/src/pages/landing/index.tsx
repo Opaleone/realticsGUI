@@ -65,7 +65,7 @@ export default function Landing() {
 
     const cityArr = formatCity(searchValue);
 
-    navigate(`/city/${cityArr[0]}/${cityArr[1]}`);
+    navigate(`/city/${cityArr[0].toLowerCase()}-${cityArr[1].toLowerCase()}`);
   }
 
   return (

@@ -9,7 +9,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' Component={Landing} />
-        <Route path='/city/:cityName/:state' Component={City} />
+        <Route path='/city/:nameAndState' Component={City} />
         <Route path='/property/:propertyName' Component={Property} />
       </Routes>
     </BrowserRouter>
