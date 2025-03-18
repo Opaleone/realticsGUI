@@ -1,0 +1,93 @@
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+
+a { word-break: break-all; }
+
+.backButton {
+  margin: 10px 10px 15px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  color: white;
+  padding: 0;
+  font-size: 28px;
+  position: absolute;
+}
+
+.backButton::before {
+  content: '<';
+  margin-right: 5px;
+}
+
+#allPropertyInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#propertyDisplayContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#propertyIntro, #propertyStats {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 43.3vh;
+  width: 50vw;
+  border: solid white 3px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#propertIntro {
+  margin-bottom: 1.5vh;
+}
+
+#propertyStats{
+  margin-top: 1.5vh;
+}
+
+#propertyIntroTitle {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+  margin-top: 12px;
+}
+
+#floorplanContainer {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 90vh;
+  width: 50vw;
+  border: solid white 3px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.labelContainer {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  padding: 5px;
+  top: 25px;
+  z-index: 999;
+  background: white;
+  animation:  gradient 15s ease infinite;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.labelText {
+  margin: 0;
+  padding: 0;
+}
