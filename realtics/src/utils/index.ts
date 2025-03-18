@@ -1,3 +1,5 @@
+import { IFloorPlan, IOrganizedFloorplans } from "../../Interfaces";
+
 /**
  * Formats the city name for console log into one that's more human readable
  * 
@@ -24,4 +26,21 @@ export function formatCity(city: string | undefined): string[] {
   }
 
   return [formattedCity, state ? state : ''];
+}
+
+export function organizeFloorplans(floorplans: IFloorPlan[]): IOrganizedFloorplans | null {
+  let organizedFloorplans: IOrganizedFloorplans = {};
+
+  for (let i = 0; i < floorplans.length; i++) {
+    const bedCount = floorplans[i].beds;
+
+    if (organizedFloorplans[bedCount]) {
+      organizedFloorplans[bedCount].push(floorplans[i]);
+    } else {
+      organizedFloorplans[bedCount] = [];
+      organizedFloorplans[bedCount].push(floorplans[i]);
+    }
+  }
+
+  return organizedFloorplans;
 }
