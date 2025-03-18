@@ -30,10 +30,10 @@ export interface IDetails {
  * }
  */
 export interface IFloorPlan {
-  _id: string | undefined,
-  name: string | undefined,
-  beds: string | undefined,
-  baths: string | undefined,
+  _id: string,
+  name: string,
+  beds: string,
+  baths: string,
   details: IDetails[]
   averages: IAverage[],
   _v: number | undefined
@@ -86,4 +86,8 @@ export interface ICityModel {
   properties: IProperty[],
   refresh: number,
   _v: number | undefined
+}
+
+export interface IOrganizedFloorplans {
+  [key: string]: IFloorPlan[]
 }
